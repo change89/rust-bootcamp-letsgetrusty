@@ -22,6 +22,12 @@ impl BrowserCommand<String> {
 }
 
 fn main() {
+    /*
+    clone and to_owned method:
+     - .clone() returns its receiver => clone() on a &str returns a &str.
+       ("For most types, clone() is sufficient because it's only defined on the underlying type and not on the reference type)
+     - If you want a String, you need a different method, which in this case is .to_owned().
+    */
     let cmd1 = BrowserCommand::new(
         "navigate".to_owned(),
         "https://www.letsgetrusty.com".to_owned(),
